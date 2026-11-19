@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PackSmart — Packing List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-top">
+        <div>
+          <h1>PackSmart</h1>
+          <p class="subtitle">Organize your trip, saved automatically in your browser.</p>
+        </div>
+        <button id="uncheck-all-btn" class="btn btn-secondary" type="button" title="Reset all packed items">
+          Uncheck All
+        </button>
+      </div>
+
+      <div class="progress-wrapper" aria-label="Packing progress">
+        <div class="progress-stats">
+          <span id="progress-label">0 of 0 items packed</span>
+          <span id="progress-percent">0%</span>
+        </div>
+        <div class="progress-track">
+          <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <form id="add-category-form" class="add-category-form">
+        <input
+          type="text"
+          id="new-category-input"
+          placeholder="New category (e.g., Clothing, Toiletries, Electronics)..."
+          aria-label="New category name"
+          required
+        />
+        <button type="submit" class="btn btn-primary">+ Add Category</button>
+      </form>
+
+      <div id="categories-container" class="categories-container">
+        <!-- Categories and items are rendered dynamically by app.js -->
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
